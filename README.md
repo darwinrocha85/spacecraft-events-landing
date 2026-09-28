@@ -4,14 +4,14 @@ Landing pública de marketing: lista todo lo reservable hoy en la flota (museos 
 funciones de teatro vigentes) y enlaza a la tienda de entradas para comprar.
 
 ## Stack
-React 18 + Vite 5, Axios, mismo tema visual del resto del proyecto. Proyecto de Firebase
-propio (no comparte hosting con el resto de naveSpace).
+React 18 + Vite 5, Axios, mismo tema visual del ecosistema naveSpace. Proyecto de Firebase
+propio (`spacecraft-events-landing`, sitio default, sin target).
 
 ## Cómo correr en local
-```bash
-npm install
-cp .env.example .env
-npm run dev
+```powershell
+npm.cmd install
+Copy-Item .env.example .env.development
+npm.cmd run dev
 ```
 Abre `http://localhost:5176`. Necesita `spacecraftSystem` (8080) corriendo.
 
@@ -19,14 +19,14 @@ Abre `http://localhost:5176`. Necesita `spacecraftSystem` (8080) corriendo.
 | Variable | Descripción |
 |---|---|
 | `VITE_API_URL` | URL de `spacecraftSystem` |
-| `VITE_TICKETS_URL` | URL de `spacecraft-tickets-frontend`, para el enlace de compra |
+| `VITE_TICKETS_URL` | URL completa de la tienda (`https://spacecraft-tickets.web.app` en prod), para el enlace de compra |
 
 ## Build y deploy
-```bash
-npm run build
-firebase deploy --only hosting
+```powershell
+npm.cmd run build
+firebase.cmd deploy --only hosting
 ```
 
 ## Repos relacionados
-Backend: [spacecraftSystem](../spacecraftSystem). Compra:
-[spacecraft-tickets-frontend](../spacecraft-tickets-frontend).
+Backend: [spacecraftSystem](https://github.com/darwinrocha85/spacecraftSystem). Compra:
+[spacecraft-tickets-frontend](https://github.com/darwinrocha85/spacecraft-tickets-frontend).
